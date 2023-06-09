@@ -133,30 +133,30 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                   height: 15,
                 ),
                 InkWell(
-                  // onTap: () async {
-                  //   if(formKey.currentState!.validate()){
-                  //     if (isLoading) return;
-                  //     setState(() {
-                  //       isLoading = true;
-                  //     });
-                  //     await Future.delayed(const Duration(seconds: 5));
-                  //     setState(() {
-                  //       isLoading = false;
-                  //     });
-                  //     var data = await ApiService().subAdminLogin(email.text, password.text);
-                  //     if(data['statusCode'] == 1){
-                  //       box.write('subadminId', data["body"]["subadminId"]);
-                  //       debugPrint('======${data["body"]["subadminId"]}');
-                  //       Fluttertoast.showToast(msg: 'LoggedIn Successfully');
-                  //       Get.offAll(const DashboardPage());
-                  //     } else{
-                  //       Fluttertoast.showToast(msg: '${data["message"]}');
-                  //     }
-                  //   }
-                  // },
-                  onTap: (){
-                    Get.to(const DashboardPage());
+                  onTap: () async {
+                    if(formKey.currentState!.validate()){
+                      if (isLoading) return;
+                      setState(() {
+                        isLoading = true;
+                      });
+                      await Future.delayed(const Duration(seconds: 5));
+                      setState(() {
+                        isLoading = false;
+                      });
+                      var data = await ApiService().subAdminLogin(email.text, password.text);
+                      if(data['statusCode'] == 1){
+                        box.write('subadminId', data["body"]["subadminId"]);
+                        debugPrint('======${data["body"]["subadminId"]}');
+                        Fluttertoast.showToast(msg: 'LoggedIn Successfully');
+                        Get.offAll(const DashboardPage());
+                      } else{
+                        Fluttertoast.showToast(msg: '${data["message"]}');
+                      }
+                    }
                   },
+                  // onTap: (){
+                  //   Get.to(const DashboardPage());
+                  // },
                   child: Container(
                     decoration: BoxDecoration(
                         gradient: LinearGradient(colors: [blue, yellow]),
