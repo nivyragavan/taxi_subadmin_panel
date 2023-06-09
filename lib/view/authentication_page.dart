@@ -5,7 +5,6 @@ import 'package:get_storage/get_storage.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:taxi_subadmin_panel/constant/style.dart';
 import 'package:taxi_subadmin_panel/view/dashboard_page.dart';
-import 'package:taxi_subadmin_panel/view/home_page.dart';
 import 'package:taxi_subadmin_panel/widget/custom_text.dart';
 
 import '../service/api_service.dart';
@@ -60,7 +59,7 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                         style: GoogleFonts.roboto(
                             fontSize: 30,
                             fontWeight: FontWeight.bold,
-                            color: green)),
+                            color: blue)),
                   ],
                 ),
                 const SizedBox(
@@ -84,12 +83,12 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                   decoration: InputDecoration(
                       contentPadding: const EdgeInsets.all(10),
                       labelText: "Email",
-                      labelStyle: TextStyle(color: green),
+                      labelStyle: TextStyle(color: blue),
                       hintText: "abc@domain.com",
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10)),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: green),
+                        borderSide: BorderSide(color: blue),
                         borderRadius: BorderRadius.circular(10),
                       )),
                   onSaved: (value) {
@@ -112,12 +111,12 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                   decoration: InputDecoration(
                       contentPadding: const EdgeInsets.all(10),
                       labelText: "Password",
-                      labelStyle: TextStyle(color: green),
+                      labelStyle: TextStyle(color: blue),
                       hintText: "123",
                       border: OutlineInputBorder(
                           borderRadius: BorderRadius.circular(10)),
                       focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: green),
+                        borderSide: BorderSide(color: blue),
                         borderRadius: BorderRadius.circular(10),
                       )),
                   onSaved: (value) {
@@ -134,30 +133,33 @@ class _AuthenticationPageState extends State<AuthenticationPage> {
                   height: 15,
                 ),
                 InkWell(
-                  onTap: () async {
-                    if(formKey.currentState!.validate()){
-                      if (isLoading) return;
-                      setState(() {
-                        isLoading = true;
-                      });
-                      await Future.delayed(const Duration(seconds: 5));
-                      setState(() {
-                        isLoading = false;
-                      });
-                      var data = await ApiService().subAdminLogin(email.text, password.text);
-                      if(data['statusCode'] == 1){
-                        box.write('subadminId', data["body"]["subadminId"]);
-                        debugPrint('======${data["body"]["subadminId"]}');
-                        Fluttertoast.showToast(msg: 'LoggedIn Successfully');
-                        Get.offAll(const DashboardPage());
-                      } else{
-                        Fluttertoast.showToast(msg: '${data["message"]}');
-                      }
-                    }
+                  // onTap: () async {
+                  //   if(formKey.currentState!.validate()){
+                  //     if (isLoading) return;
+                  //     setState(() {
+                  //       isLoading = true;
+                  //     });
+                  //     await Future.delayed(const Duration(seconds: 5));
+                  //     setState(() {
+                  //       isLoading = false;
+                  //     });
+                  //     var data = await ApiService().subAdminLogin(email.text, password.text);
+                  //     if(data['statusCode'] == 1){
+                  //       box.write('subadminId', data["body"]["subadminId"]);
+                  //       debugPrint('======${data["body"]["subadminId"]}');
+                  //       Fluttertoast.showToast(msg: 'LoggedIn Successfully');
+                  //       Get.offAll(const DashboardPage());
+                  //     } else{
+                  //       Fluttertoast.showToast(msg: '${data["message"]}');
+                  //     }
+                  //   }
+                  // },
+                  onTap: (){
+                    Get.to(const DashboardPage());
                   },
                   child: Container(
                     decoration: BoxDecoration(
-                        gradient: LinearGradient(colors: [green, dark]),
+                        gradient: LinearGradient(colors: [blue, yellow]),
                         borderRadius: BorderRadius.circular(10)),
                     alignment: Alignment.center,
                     width: double.maxFinite,

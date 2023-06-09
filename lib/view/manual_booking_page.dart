@@ -61,7 +61,7 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
             'Sub Admin Panel',
             style: TextStyle(color: Colors.black),
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: yellow,
           actions: [
             IconButton(
                 onPressed: () {
@@ -86,7 +86,7 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
                   text: 'Manual Booking',
                   size: 20,
                   weight: FontWeight.bold,
-                  color: green,
+                  color: blue,
                 ),
                 const SizedBox(height: 20),
                 Expanded(
@@ -114,7 +114,7 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
           Text(
             'Add Booking',
             style: TextStyle(
-                fontSize: 20, color: green, fontWeight: FontWeight.bold),
+                fontSize: 20, color: blue, fontWeight: FontWeight.bold),
           ),
           const SizedBox(height: 15),
           Row(
@@ -122,52 +122,52 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
               Expanded(
                 child: TextField(
                   controller: name,
-                  cursorColor: green,
+                  cursorColor: blue,
                   decoration: InputDecoration(
                       contentPadding: const EdgeInsets.all(10),
                       hintText: "Enter Name",
                       border: const OutlineInputBorder(),
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: green))),
+                          borderSide: BorderSide(color: blue))),
                 ),
               ),
               const SizedBox(width: 10),
               Expanded(
                 child: TextField(
                   controller: phone,
-                  cursorColor: green,
+                  cursorColor: blue,
                   decoration: InputDecoration(
                       contentPadding: const EdgeInsets.all(10),
                       hintText: "Enter Phone Number",
                       border: const OutlineInputBorder(),
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: green))),
+                          borderSide: BorderSide(color: blue))),
                 ),
               ),
               const SizedBox(width: 10),
               Expanded(
                 child: TextField(
                   controller: pickup,
-                  cursorColor: green,
+                  cursorColor: blue,
                   decoration: InputDecoration(
                       contentPadding: const EdgeInsets.all(10),
                       hintText: "Enter Pickup Location",
                       border: const OutlineInputBorder(),
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: green))),
+                          borderSide: BorderSide(color: blue))),
                 ),
               ),
               const SizedBox(width: 10),
               Expanded(
                 child: TextField(
                   controller: drop,
-                  cursorColor: green,
+                  cursorColor: blue,
                   decoration: InputDecoration(
                       contentPadding: const EdgeInsets.all(10),
                       hintText: "Enter Drop Location",
                       border: const OutlineInputBorder(),
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: green))),
+                          borderSide: BorderSide(color: blue))),
                 ),
               ),
             ],
@@ -178,7 +178,7 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
               Expanded(
                 child: TypeAheadFormField(
                   textFieldConfiguration: TextFieldConfiguration(
-                      cursorColor: green,
+                      cursorColor: blue,
                       controller: package,
                       decoration: InputDecoration(
                         hintText: 'Select package',
@@ -186,7 +186,7 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
                         border: const OutlineInputBorder(
                             borderSide: BorderSide(color: Colors.black)),
                         focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: green, width: 2)),
+                            borderSide: BorderSide(color: blue, width: 2)),
                       )),
                   suggestionsCallback: (pattern) {
                     return ManualBookingPage.packageItems.where((item) =>
@@ -214,7 +214,7 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
               Expanded(
                 child: TypeAheadFormField(
                   textFieldConfiguration: TextFieldConfiguration(
-                      cursorColor: green,
+                      cursorColor: blue,
                       controller: rental,
                       decoration: InputDecoration(
                         hintText: 'Select rental hour (in hours)',
@@ -222,7 +222,7 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
                         border: const OutlineInputBorder(
                             borderSide: BorderSide(color: Colors.black)),
                         focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: green, width: 2)),
+                            borderSide: BorderSide(color: blue, width: 2)),
                       )),
                   suggestionsCallback: (pattern) {
                     return ManualBookingPage.rentalItems.where((item) =>
@@ -250,7 +250,7 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
               Expanded(
                 child: TypeAheadFormField(
                   textFieldConfiguration: TextFieldConfiguration(
-                      cursorColor: green,
+                      cursorColor: blue,
                       controller: cab,
                       decoration: InputDecoration(
                         hintText: 'Select cab',
@@ -258,7 +258,7 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
                         border: const OutlineInputBorder(
                             borderSide: BorderSide(color: Colors.black)),
                         focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: green, width: 2)),
+                            borderSide: BorderSide(color: blue, width: 2)),
                       )),
                   suggestionsCallback: (pattern) {
                     return ManualBookingPage.cabItems.where((item) =>
@@ -291,7 +291,7 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
                         border: const OutlineInputBorder(
                             borderSide: BorderSide(color: Colors.black)),
                         focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: green, width: 2)),
+                            borderSide: BorderSide(color: blue, width: 2)),
                         hintText: 'Enter pickup date'),
                     readOnly: true,
                     onTap: () async {
@@ -334,7 +334,7 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
                         border: const OutlineInputBorder(
                             borderSide: BorderSide(color: Colors.black)),
                         focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: green, width: 2)),
+                            borderSide: BorderSide(color: blue, width: 2)),
                         hintText: 'Enter drop date'),
                     readOnly: true,
                     onTap: () async {
@@ -399,7 +399,7 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
               },
               child: Container(
                 decoration: BoxDecoration(
-                    gradient: LinearGradient(colors: [green, dark]),
+                    gradient: LinearGradient(colors: [blue, yellow]),
                     borderRadius: BorderRadius.circular(10)),
                 alignment: Alignment.center,
                 width: 500,
@@ -441,7 +441,7 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
         Text(
           'Add Booking',
           style: TextStyle(
-              fontSize: 20, color: black, fontWeight: FontWeight.bold),
+              fontSize: 20, color: blue, fontWeight: FontWeight.bold),
         ),
         const SizedBox(height: 15),
         Row(
@@ -449,26 +449,26 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
             Expanded(
               child: TextField(
                 controller: name,
-                cursorColor: green,
+                cursorColor: blue,
                 decoration: InputDecoration(
                     contentPadding: const EdgeInsets.all(10),
                     hintText: "Enter Name",
                     border: const OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: green))),
+                        borderSide: BorderSide(color: blue))),
               ),
             ),
             const SizedBox(width: 10),
             Expanded(
               child: TextField(
                 controller: phone,
-                cursorColor: green,
+                cursorColor: blue,
                 decoration: InputDecoration(
                     contentPadding: const EdgeInsets.all(10),
                     hintText: "Enter Phone Number",
                     border: const OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: green))),
+                        borderSide: BorderSide(color: blue))),
               ),
             ),
           ],
@@ -479,26 +479,26 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
             Expanded(
               child: TextField(
                 controller: pickup,
-                cursorColor: green,
+                cursorColor: blue,
                 decoration: InputDecoration(
                     contentPadding: const EdgeInsets.all(10),
                     hintText: "Enter Pickup Location",
                     border: const OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: green))),
+                        borderSide: BorderSide(color: blue))),
               ),
             ),
             const SizedBox(width: 10),
             Expanded(
               child: TextField(
                 controller: drop,
-                cursorColor: green,
+                cursorColor: blue,
                 decoration: InputDecoration(
                     contentPadding: const EdgeInsets.all(10),
                     hintText: "Enter Drop Location",
                     border: const OutlineInputBorder(),
                     focusedBorder: OutlineInputBorder(
-                        borderSide: BorderSide(color: green))),
+                        borderSide: BorderSide(color: blue))),
               ),
             ),
           ],
@@ -509,7 +509,7 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
             Expanded(
               child: TypeAheadFormField(
                 textFieldConfiguration: TextFieldConfiguration(
-                    cursorColor: green,
+                    cursorColor: blue,
                     controller: package,
                     decoration: InputDecoration(
                       hintText: 'Select package',
@@ -517,7 +517,7 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
                       border: const OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.black)),
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: green, width: 2)),
+                          borderSide: BorderSide(color: blue, width: 2)),
                     )),
                 suggestionsCallback: (pattern) {
                   return ManualBookingPage.packageItems.where((item) =>
@@ -545,7 +545,7 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
             Expanded(
               child: TypeAheadFormField(
                 textFieldConfiguration: TextFieldConfiguration(
-                    cursorColor: green,
+                    cursorColor: blue,
                     controller: rental,
                     decoration: InputDecoration(
                       hintText: 'Select rental hour',
@@ -553,7 +553,7 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
                       border: const OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.black)),
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: green, width: 2)),
+                          borderSide: BorderSide(color: blue, width: 2)),
                     )),
                 suggestionsCallback: (pattern) {
                   return ManualBookingPage.rentalItems.where((item) =>
@@ -581,7 +581,7 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
             Expanded(
               child: TypeAheadFormField(
                 textFieldConfiguration: TextFieldConfiguration(
-                    cursorColor: green,
+                    cursorColor: blue,
                     controller: cab,
                     decoration: InputDecoration(
                       hintText: 'Select cab',
@@ -589,7 +589,7 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
                       border: const OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.black)),
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: green, width: 2)),
+                          borderSide: BorderSide(color: blue, width: 2)),
                     )),
                 suggestionsCallback: (pattern) {
                   return ManualBookingPage.cabItems.where((item) =>
@@ -626,7 +626,7 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
                       border: const OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.black)),
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: green, width: 2)),
+                          borderSide: BorderSide(color: blue, width: 2)),
                       hintText: 'Enter pickup date'),
                   readOnly: true,
                   onTap: () async {
@@ -669,7 +669,7 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
                       border: const OutlineInputBorder(
                           borderSide: BorderSide(color: Colors.black)),
                       focusedBorder: OutlineInputBorder(
-                          borderSide: BorderSide(color: green, width: 2)),
+                          borderSide: BorderSide(color: blue, width: 2)),
                       hintText: 'Enter drop date'),
                   readOnly: true,
                   onTap: () async {
@@ -706,7 +706,7 @@ class _ManualBookingPageState extends State<ManualBookingPage> {
         Center(
           child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-                primary: green, fixedSize: const Size(200, 45)),
+                primary: blue, fixedSize: const Size(200, 45)),
             // onPressed: () async {
             //   var data = await APIService().createManualBooking(
             //       name.text,

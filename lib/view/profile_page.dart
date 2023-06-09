@@ -23,7 +23,7 @@ class ProfilePage extends StatelessWidget {
             'Sub Admin Panel',
             style: TextStyle(color: Colors.black),
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: yellow,
           actions: [
             IconButton(
                 onPressed: () {
@@ -48,7 +48,7 @@ class ProfilePage extends StatelessWidget {
                   text: 'Profile',
                   size: 20,
                   weight: FontWeight.bold,
-                  color: green,
+                  color: blue,
                 ),
                 const SizedBox(height: 20),
                 Align(
@@ -75,7 +75,7 @@ class ProfilePage extends StatelessWidget {
                     padding: const EdgeInsets.all(10),
                     child: CustomText(
                       text: "Name :",
-                      color: green,
+                      color: blue,
                       weight: FontWeight.w900,
                     ),
                   ),
@@ -84,13 +84,13 @@ class ProfilePage extends StatelessWidget {
                   width: 300,
                   child: TextFormField(
                     controller: controller.nameController,
-                    cursorColor: green,
+                    cursorColor: blue,
                     decoration: InputDecoration(
                         contentPadding: const EdgeInsets.all(10),
                         border: const OutlineInputBorder(),
                         hintText: "Enter your name",
                         focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: green))),
+                            borderSide: BorderSide(color: blue))),
                   ),
                 ),
               ],
@@ -104,7 +104,7 @@ class ProfilePage extends StatelessWidget {
                     padding: const EdgeInsets.all(10),
                     child: CustomText(
                       text: "Phone Number :",
-                      color: green,
+                      color: blue,
                       weight: FontWeight.w900,
                     ),
                   ),
@@ -113,13 +113,13 @@ class ProfilePage extends StatelessWidget {
                   width: 300,
                   child: TextFormField(
                     controller: controller.phoneController,
-                    cursorColor: green,
+                    cursorColor: blue,
                     decoration: InputDecoration(
                         contentPadding: const EdgeInsets.all(10),
                         border: const OutlineInputBorder(),
                         hintText: "Enter your phone number",
                         focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: green))),
+                            borderSide: BorderSide(color: blue))),
                   ),
                 ),
               ],
@@ -133,7 +133,7 @@ class ProfilePage extends StatelessWidget {
                     padding: const EdgeInsets.all(10),
                     child: CustomText(
                       text: "Designation :",
-                      color: green,
+                      color: blue,
                       weight: FontWeight.w900,
                     ),
                   ),
@@ -142,13 +142,13 @@ class ProfilePage extends StatelessWidget {
                   width: 300,
                   child: TextFormField(
                     controller: controller.designationController,
-                    cursorColor: green,
+                    cursorColor: blue,
                     decoration: InputDecoration(
                         contentPadding: const EdgeInsets.all(10),
                         border: const OutlineInputBorder(),
                         hintText: "Enter your designation",
                         focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: green))),
+                            borderSide: BorderSide(color: blue))),
                   ),
                 ),
               ],
@@ -162,7 +162,7 @@ class ProfilePage extends StatelessWidget {
                     padding: const EdgeInsets.all(10),
                     child: CustomText(
                       text: "Email :",
-                      color: green,
+                      color: blue,
                       weight: FontWeight.w900,
                     ),
                   ),
@@ -171,13 +171,13 @@ class ProfilePage extends StatelessWidget {
                   width: 300,
                   child: TextFormField(
                     controller: controller.emailController,
-                    cursorColor: green,
+                    cursorColor: blue,
                     decoration: InputDecoration(
                         contentPadding: const EdgeInsets.all(10),
                         border: const OutlineInputBorder(),
                         hintText: "Enter your email address",
                         focusedBorder: OutlineInputBorder(
-                            borderSide: BorderSide(color: green))),
+                            borderSide: BorderSide(color: blue))),
                   ),
                 ),
               ],

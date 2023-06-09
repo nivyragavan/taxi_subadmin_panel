@@ -52,7 +52,7 @@ class _RidesBookedPageState extends State<RidesBookedPage> {
             'Sub Admin Panel',
             style: TextStyle(color: Colors.black),
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: yellow,
           actions: [
             IconButton(
                 onPressed: () {
@@ -74,7 +74,7 @@ class _RidesBookedPageState extends State<RidesBookedPage> {
                 text: 'Booked Rides',
                 size: 20,
                 weight: FontWeight.bold,
-                color: green,
+                color: blue,
               ),
               const SizedBox(height: 20),
               Expanded(
@@ -106,70 +106,105 @@ class _RidesBookedPageState extends State<RidesBookedPage> {
             borderRadius: BorderRadius.circular(8),
           ),
           margin: const EdgeInsets.only(bottom: 30),
-          child: isLoading == false
+          child:
+          isLoading == false
               ? Center(
             child: CircularProgressIndicator(
-              color: green,
+              color: blue,
             ),
           )
               : bookedRidesModel!.body!.bookedRides!.isEmpty
               ? Center(child: Image.asset('assets/images/nodatafound.png'))
-              :  Card(
+              :
+          Card(
             child: DataTable2(
                 columnSpacing: 5,
                 horizontalMargin: 12,
                 minWidth: 1000,
                 columns: [
                   DataColumn(
-                    label: Text('S:No', style: TextStyle(fontSize: 15, color: green)),
+                    label: Text('S:No', style: TextStyle(fontSize: 15, color: blue)),
                   ),
                   DataColumn(
-                    label: Text('Name', style: TextStyle(fontSize: 15, color: green)),
+                    label: Text('Name', style: TextStyle(fontSize: 15, color: blue)),
                   ),
                   DataColumn(
-                    label: Text('Contact', style: TextStyle(fontSize: 15, color: green)),
+                    label: Text('Contact', style: TextStyle(fontSize: 15, color: blue)),
                   ),
                   DataColumn(
-                    label: Text('Pickup Location', style: TextStyle(fontSize: 15, color: green)),
+                    label: Text('Pickup Location', style: TextStyle(fontSize: 15, color: blue)),
                   ),
                   DataColumn(
-                    label: Text('Drop Location', style: TextStyle(fontSize: 15, color: green)),
+                    label: Text('Drop Location', style: TextStyle(fontSize: 15, color: blue)),
                   ),
                   DataColumn(
-                    label: Text('Package', style: TextStyle(fontSize: 15, color: green)),
+                    label: Text('Package', style: TextStyle(fontSize: 15, color: blue)),
                   ),
                   DataColumn(
-                    label: Text('Rental Hour', style: TextStyle(fontSize: 15, color: green)),
+                    label: Text('Rental Hour', style: TextStyle(fontSize: 15, color: blue)),
                   ),
                   DataColumn(
-                    label: Text('Cab Type', style: TextStyle(fontSize: 15, color: green)),
+                    label: Text('Cab Type', style: TextStyle(fontSize: 15, color: blue)),
                   ),
                   DataColumn(
-                    label: Text('Pickup Date', style: TextStyle(fontSize: 15, color: green)),
+                    label: Text('Pickup Date', style: TextStyle(fontSize: 15, color: blue)),
                   ),
                   DataColumn(
-                    label: Text('Drop Date', style: TextStyle(fontSize: 15, color: green)),
+                    label: Text('Drop Date', style: TextStyle(fontSize: 15, color: blue)),
                   ),
                   DataColumn(
-                    label: Text('Status', style: TextStyle(fontSize: 15, color: green)),
+                    label: Text('Status', style: TextStyle(fontSize: 15, color: blue)),
                   ),
                 ],
                 rows: List.generate(
-                    bookedRidesModel!.body!.bookedRides!.length,
+                  10,
+                    // bookedRidesModel!.body!.bookedRides!.length,
                         (index) {
-                      var e = bookedRidesModel!.body!.bookedRides![index];
+                      // var e = bookedRidesModel!.body!.bookedRides![index];
                       return DataRow(cells: [
-                        DataCell(Text('${index + 1}')),
-                         DataCell(Text('${e.name}')),
-                         DataCell(Text('${e.phonenumber}')),
-                         DataCell(Text('${e.pickupLocation}')),
-                         DataCell(Text('${e.dropLocation}')),
-                         DataCell(Text('${e.package}')),
-                         DataCell(Text('${e.rentalhour}')),
-                         DataCell(Text('${e.cab}')),
-                         DataCell(Text(DateFormat('dd-MM-yyyy').format(e.pickupDate!))),
-                         DataCell(Text(DateFormat('dd-MM-yyyy').format(e.pickupDate!))),
-                        DataCell(Text('${e.tripStatus}')),
+                        DataCell(Text(
+                            '${index + 1}'
+                        )),
+                         DataCell(Text(
+                             // '${e.name}'
+                                 'xyz'
+                         )),
+                         DataCell(Text(
+                             // '${e.phonenumber}'
+                           '9876543210'
+                         )),
+                         DataCell(Text(
+                             // '${e.pickupLocation}'
+                         'coimbatore'
+                         )),
+                         DataCell(Text(
+                             // '${e.dropLocation}'
+                         'ooty'
+                         )),
+                         DataCell(Text(
+                             // '${e.package}'
+                         'Outstation'
+                         )),
+                         DataCell(Text(
+                             // '${e.rentalhour}'
+                         ''
+                         )),
+                         DataCell(Text(
+                             // '${e.cab}'
+                         'XUV'
+                         )),
+                         DataCell(Text(
+                             // DateFormat('dd-MM-yyyy').format(e.pickupDate!)
+                         '12/05/2023'
+                         )),
+                         DataCell(Text(
+                             // DateFormat('dd-MM-yyyy').format(e.pickupDate!)
+                         '15/05/2023'
+                         )),
+                        DataCell(Text(
+                            // '${e.tripStatus}'
+                        'In Progress'
+                        )),
                       ]);
                     })),
           )),

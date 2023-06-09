@@ -1,6 +1,6 @@
 class ApiConstant{
 
-  static String baseUrl = 'https://taxiapis.viswatechnologysolutions.com/v1/api/mobile/subadmin/';
+  static String baseUrl = 'http://52.66.159.102:3002/v1/api/mobile/subadmin/';
 
   static String subAdminLogin = 'subadminLogin';
   static String profileView = "subadminprofileview";

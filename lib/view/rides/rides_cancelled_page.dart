@@ -52,7 +52,7 @@ class _CancelledRidesPageState extends State<CancelledRidesPage> {
             'Sub Admin Panel',
             style: TextStyle(color: Colors.black),
           ),
-          backgroundColor: Colors.white,
+          backgroundColor: yellow,
           actions: [
             IconButton(
                 onPressed: () {
@@ -77,7 +77,7 @@ class _CancelledRidesPageState extends State<CancelledRidesPage> {
                   text: 'Cancelled Rides',
                   size: 20,
                   weight: FontWeight.bold,
-                  color: green,
+                  color: blue,
                 ),
                 const SizedBox(height: 20),
                 Expanded(
@@ -111,7 +111,7 @@ class _CancelledRidesPageState extends State<CancelledRidesPage> {
           child: isLoading == false
               ? Center(
                   child: CircularProgressIndicator(
-                    color: green,
+                    color: blue,
                   ),
                 )
               : cancelledRidesModel!.body!.cancelledRides!.isEmpty
@@ -124,43 +124,43 @@ class _CancelledRidesPageState extends State<CancelledRidesPage> {
                           columns: [
                             DataColumn(
                               label: Text('S:No',
-                                  style: TextStyle(fontSize: 15, color: green)),
+                                  style: TextStyle(fontSize: 15, color: blue)),
                             ),
                             DataColumn(
                               label: Text('Name',
-                                  style: TextStyle(fontSize: 15, color: green)),
+                                  style: TextStyle(fontSize: 15, color: blue)),
                             ),
                             DataColumn(
                               label: Text('Contact',
-                                  style: TextStyle(fontSize: 15, color: green)),
+                                  style: TextStyle(fontSize: 15, color: blue)),
                             ),
                             DataColumn(
                               label: Text('Pickup Location',
-                                  style: TextStyle(fontSize: 15, color: green)),
+                                  style: TextStyle(fontSize: 15, color: blue)),
                             ),
                             DataColumn(
                               label: Text('Drop Location',
-                                  style: TextStyle(fontSize: 15, color: green)),
+                                  style: TextStyle(fontSize: 15, color: blue)),
                             ),
                             DataColumn(
                               label: Text('Package',
-                                  style: TextStyle(fontSize: 15, color: green)),
+                                  style: TextStyle(fontSize: 15, color: blue)),
                             ),
                             DataColumn(
                               label: Text('Rental Hour',
-                                  style: TextStyle(fontSize: 15, color: green)),
+                                  style: TextStyle(fontSize: 15, color: blue)),
                             ),
                             DataColumn(
                               label: Text('Cab Type',
-                                  style: TextStyle(fontSize: 15, color: green)),
+                                  style: TextStyle(fontSize: 15, color: blue)),
                             ),
                             DataColumn(
                               label: Text('Pickup Date',
-                                  style: TextStyle(fontSize: 15, color: green)),
+                                  style: TextStyle(fontSize: 15, color: blue)),
                             ),
                             DataColumn(
                               label: Text('Drop Date',
-                                  style: TextStyle(fontSize: 15, color: green)),
+                                  style: TextStyle(fontSize: 15, color: blue)),
                             ),
                           ],
                           rows: List.generate(

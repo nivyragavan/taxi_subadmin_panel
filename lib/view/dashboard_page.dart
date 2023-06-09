@@ -68,7 +68,7 @@ class _DashboardPageState extends State<DashboardPage> {
           'Sub Admin Panel',
           style: TextStyle(color: Colors.black),
         ),
-        backgroundColor: Colors.white,
+        backgroundColor: yellow,
         actions: [
           IconButton(
               onPressed: () {
@@ -90,7 +90,7 @@ class _DashboardPageState extends State<DashboardPage> {
                 text: 'Dashboard',
                 size: 20,
                 weight: FontWeight.bold,
-                color: green,
+                color: blue,
               ),
               const SizedBox(height: 20),
               Expanded(
@@ -119,38 +119,46 @@ class _DashboardPageState extends State<DashboardPage> {
 
     return Row(
       children: [
-        isLoading == false ? Container() : InfoCard(
+        // isLoading == false ? Container() :
+        InfoCard(
           title: "Booked Rides",
-          value: "${ridesCountModel!.body!.bookedRides}",
+          // value: "${ridesCountModel!.body!.bookedRides}",
           onTap: () {},
           topColor: active,
+          value: '10',
         ),
         SizedBox(
           width: _width / 64,
         ),
-        isLoading == false ? Container() : InfoCard(
+        // isLoading == false ? Container() :
+        InfoCard(
           title: "Scheduled Rides",
-          value: "${ridesCountModel!.body!.scheduledCount}",
+          // value: "${ridesCountModel!.body!.scheduledCount}",
           onTap: () {},
           topColor: Colors.orange,
+          value: '10',
         ),
         SizedBox(
           width: _width / 64,
         ),
-        isLoading == false ? Container() : InfoCard(
+        // isLoading == false ? Container() :
+        InfoCard(
           title: "Completed Rides",
-          value: "${ridesCountModel!.body!.completedCount}",
+          // value: "${ridesCountModel!.body!.completedCount}",
           topColor: Colors.lightGreen,
           onTap: () {},
+          value: '10',
         ),
         SizedBox(
           width: _width / 64,
         ),
-        isLoading == false ? Container() : InfoCard(
+        // isLoading == false ? Container() :
+        InfoCard(
           title: "Cancelled Rides",
-          value: "${ridesCountModel!.body!.cancelledCount}",
+          // value: "${ridesCountModel!.body!.cancelledCount}",
           topColor: Colors.redAccent,
           onTap: () {},
+          value: '10',
         ),
       ],
     );
@@ -163,35 +171,43 @@ class _DashboardPageState extends State<DashboardPage> {
       height: 400,
       child: Column(
         children: [
-          isLoading == false ? Container() : InfoCardSmall(
+          // isLoading == false ? Container() :
+          InfoCardSmall(
             title: "Booked Rides",
-            value: "${ridesCountModel!.body!.bookedRides}",
+            // value: "${ridesCountModel!.body!.bookedRides}",
             onTap: () {},
+            value: '10',
           ),
           SizedBox(
             height: _width / 64,
           ),
-          isLoading == false ? Container() : InfoCardSmall(
+          // isLoading == false ? Container() :
+          InfoCardSmall(
             title: "Scheduled Rides",
-            value: "${ridesCountModel!.body!.scheduledCount}",
+            // value: "${ridesCountModel!.body!.scheduledCount}",
             onTap: () {},
             isActive: true,
+            value: '10',
           ),
           SizedBox(
             height: _width / 64,
           ),
-          isLoading == false ? Container() : InfoCardSmall(
+          // isLoading == false ? Container() :
+          InfoCardSmall(
             title: "Completed Rides",
-            value: "${ridesCountModel!.body!.completedCount}",
+            // value: "${ridesCountModel!.body!.completedCount}",
             onTap: () {},
+            value: '10',
           ),
           SizedBox(
             height: _width / 64,
           ),
-          isLoading == false ? Container() : InfoCardSmall(
+          // isLoading == false ? Container() :
+          InfoCardSmall(
             title: "Cancelled Rides",
-            value: "${ridesCountModel!.body!.cancelledCount}",
+            // value: "${ridesCountModel!.body!.cancelledCount}",
             onTap: () {},
+            value: '10',
           ),
         ],
       ),
@@ -230,7 +246,7 @@ class _DashboardPageState extends State<DashboardPage> {
                     height: 200,
                     child: SfCartesianChart(
                       primaryXAxis: CategoryAxis(),
-                      palette: [green],
+                      palette: [yellow],
                       series: [
                         StackedColumnSeries(
                             dataSource: driverChartData,
@@ -318,7 +334,7 @@ class _DashboardPageState extends State<DashboardPage> {
                     height: 200,
                     child: SfCartesianChart(
                       primaryXAxis: CategoryAxis(),
-                      palette: [green],
+                      palette: [blue],
                       series: [
                         StackedColumnSeries(
                             dataSource: driverChartData,
